@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace WpfApp2
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            List<Equipos> ListaEquipos = new List<Equipos>();
+
+            ListaEquipos.Add(new Equipos() { Equipo1 = "Real Madrid", Equipo2 = "Bayern", CampeonatosEuropa1 = "15", CampeonatosEuropa2 = "6" });
+            ListaEquipos.Add(new Equipos() { Equipo1 = "PSG", Equipo2 = "Manchester City", CampeonatosEuropa1 = "0", CampeonatosEuropa2 = "1" });
+            ListaEquipos.Add(new Equipos() { Equipo1 = "Arsenal", Equipo2 = "Juventus", CampeonatosEuropa1 = "0", CampeonatosEuropa2 = "2" });
+            ListaEquipos.Add(new Equipos() { Equipo1 = "ACMilan", Equipo2 = "Barcelona", CampeonatosEuropa1 = "7", CampeonatosEuropa2 = "5" });
+
+            ListBoxEquipos.ItemsSource = ListaEquipos;
+        }
+
+    }
+
+    public class Equipos
+    {
+        public string Equipo1 { get; set; }
+        public string Equipo2 { get; set; }
+        public string CampeonatosEuropa1 { get; set; }
+        public string CampeonatosEuropa2 { get; set; }
+    }
+}
