@@ -1,0 +1,48 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        List<int> Listanum = new List<int>();
+        Listanum.Add(20);
+        Listanum.Add(30);
+        Listanum.Add(40);
+        Listanum.Add(50);
+        Listanum.Add(60);
+
+        /*
+        Console.WriteLine("Cuantos datos quiere ingresar?");
+        int Cant = int.Parse(Console.ReadLine());
+        Console.WriteLine("");
+
+        for (int i = 0; i < Cant; i++)
+        {
+            Console.WriteLine("Ingrese un dato:");
+            Listanum.Add(int.Parse(Console.ReadLine()));
+            Console.WriteLine("");
+
+        }
+
+        if (Listanum.Contains(0))
+        {
+            Listanum.Remove(0);
+        }
+        
+        for (int i = 0; i < Listanum.Count; i++)
+        {
+            Console.WriteLine(Listanum[i]);
+        }
+        */
+
+        int[] Datos = { 70, 80, 90, 100, 110 };
+
+        for (int i = 0; i < Datos.Length; i++)
+        {
+            Listanum.Add(Datos[i]);
+        }
+
+        foreach (int i in Listanum)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
